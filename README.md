@@ -7,7 +7,7 @@ Create cypress.env.json with following content providing correct values:
   "auth_client_id": "<client_id>",
   "auth_username": "<username>",
   "auth_password": "<password>",
-  "credential_type": "password"
+  "credential_type": "password" 
 }
 ```
 ## Run locally
