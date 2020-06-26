@@ -11,4 +11,4 @@ jobs:
       - uses: zwaldowski/match-label-action@v2
         with:
           allowed: 'type:fix, type:new, type:other'
-          repo-token: ${{ secrets.GITHUB_TOKEN}}    
+          
