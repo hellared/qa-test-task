@@ -1,0 +1,6 @@
+theme:workflow:
+  - ".github/**"
+
+theme:tests:
+  - "cypress/e2e/**"
+  
