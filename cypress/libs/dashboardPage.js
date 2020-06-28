@@ -34,12 +34,19 @@ export const dataGridDataColumn = hook('datagrid-data-column');
 export const manageFiltersBar = '.Sidebar_sidebar_1CwW3';
 export const manageFiltersHeader = '.page__header-text';
 
+
+// Getters
+export const getNavigationBar = () => cy.get(navigationBar);
+export const getHeader = () => cy.get(header);
+export const getExport = () => cy.get(exportButton);
+export const getDashboardFilters = () => cy.get(dashboardFilters); 
+
 export const open = () => cy.visit('/dashboard')
 export const openDashboard = () =>
     cy.get(navigationBar)
         .find(dashboardBar)
         .click();
-export const getHeader = () => cy.get(header);
+
 export const applyStatusFilter = (status) =>
     cy.get(dashboardFilters).contains(status)
         .click();

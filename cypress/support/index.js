@@ -17,7 +17,13 @@
 import './commands'
 require('cypress-commands');
 import '@percy/cypress';
-
-
+import { addMatchImageSnapshotCommand } from 'cypress-image-snapshot/command';
+if (Cypress.config('isInteractive')) {
+  Cypress.Commands.add('matchImageSnapshot', () => {
+    cy.log('Skipping snapshot 👀')
+  })
+} else {
+  addMatchImageSnapshotCommand()
+}
 // Alternatively you can use CommonJS syntax:
 // require('./commands')
