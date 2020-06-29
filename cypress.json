@@ -15,5 +15,9 @@
     "html": true,
     "json": true
   },
-  "projectId": "j5peet"
+  "projectId": "j5peet",
+  "firefoxGcInterval": {
+    "runMode": null,
+    "openMode": null
+  }
 }
