@@ -12,8 +12,8 @@ describe('Dashboard', () => {
   it('User is able to reach dashboard from navigation bar', function () {
     dashboardPage.openDashboard();
     dashboardPage.getHeader().should('contain', 'Dashboard');
-    cy.percySnapshot("Dashboard page");
     getUrl().should('contain', '/dashboard');
+    cy.percySnapshot("Dashboard page");
     dashboardPage.open();
   });
   it('User is able to filter items by status filter', function () {
