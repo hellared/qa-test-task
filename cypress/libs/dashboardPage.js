@@ -1,6 +1,7 @@
 import { hook } from '../libs/helpers';
 
 export const navigationBar = '.navbar';
+export const loader = '.q-view-loader';
 export const dashboardBar = 'a[href="/dashboard"]';
 export const header = 'h1';
 export const exportButton = hook('dashboard-export-all');
@@ -34,7 +35,10 @@ export const dataGridDataColumn = hook('datagrid-data-column');
 export const manageFiltersBar = '.Sidebar_sidebar_1CwW3';
 export const manageFiltersHeader = '.page__header-text';
 
-export const open = () => cy.visit('/dashboard')
+export const open = () => {
+    cy.visit('/dashboard');
+    cy.get(loader, { timeout: 100000}).should('not.be.visible')
+}
 export const openDashboard = () =>
     cy.get(navigationBar)
         .find(dashboardBar)
