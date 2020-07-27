@@ -35,14 +35,16 @@ export const dataGridDataColumn = hook('datagrid-data-column');
 export const manageFiltersBar = '.Sidebar_sidebar_1CwW3';
 export const manageFiltersHeader = '.page__header-text';
 
+export const waitLoader = () => cy.get(loader, { timeout: 100000}).should('not.be.visible');
 export const open = () => {
     cy.visit('/dashboard');
-    cy.get(loader, { timeout: 100000}).should('not.be.visible')
+    waitLoader();
 }
 export const openDashboard = () =>
     cy.get(navigationBar)
         .find(dashboardBar)
         .click();
+    waitLoader();
 export const getHeader = () => cy.get(header);
 export const applyStatusFilter = (status) =>
     cy.get(dashboardFilters).contains(status)
