@@ -40,11 +40,12 @@ export const open = () => {
     cy.visit('/dashboard');
     waitLoader();
 }
-export const openDashboard = () =>
+export const openDashboard = () => {
     cy.get(navigationBar)
         .find(dashboardBar)
         .click();
     waitLoader();
+}
 export const getHeader = () => cy.get(header);
 export const applyStatusFilter = (status) =>
     cy.get(dashboardFilters).contains(status)
