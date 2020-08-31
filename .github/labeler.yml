@@ -3,4 +3,3 @@ theme:workflow:
 
 theme:tests:
   - "cypress/e2e/**"
-  
