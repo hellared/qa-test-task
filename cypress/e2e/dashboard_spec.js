@@ -41,7 +41,7 @@ describe('Dashboard', () => {
   });
   it('User is able to search users in user filter', function () {
     dashboardPage.applyUserSearch('jdhsfjhbf')
-      .should('contain.text', '... and 3 more')
+      .should('contain.text', 'No matching people.')
   });
   it('User is able to manage filters', function () {
     dashboardPage.openManageFilters();
